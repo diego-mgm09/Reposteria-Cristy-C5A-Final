@@ -149,8 +149,16 @@
 
 .titles {
     font-family: DM Serif Display;
-
 }
+
+/* Escala de forma fluida: 2rem en móvil → 4.5rem en monitor grande.
+   clamp(mínimo, valor-fluido, máximo)
+   El valor fluido "5vw" crece con el ancho de pantalla, los extremos lo limitan. */
+.hero-title {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.;
+}
+
 
 .header-main {
     position: relative;
@@ -736,14 +744,18 @@ nav,
 @media (max-width: 575.98px) {
     .history-gallery {
         overflow: hidden;
+        padding-top: .75rem !important;
+        padding-bottom: .75rem !important;
     }
 
     .box {
-        min-height: 300px;
+        /* La composición conserva el efecto 3D, pero evita el vacío excesivo
+           antes de las imágenes en pantallas estrechas. */
+        min-height: 285px;
     }
 
     .box .item {
-        bottom: 25px;
+        bottom: 50px;
         left: calc(50% - 75px);
         width: 150px;
         height: 225px;
