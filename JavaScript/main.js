@@ -4,20 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Aquí defines tus pasteles: título, descripción y color propio.
     // El "color" se aplica al título cuando ese pastel está activo.
     // El orden debe coincidir con el data-index de cada .cake-slide en el HTML
-    const cakes = [
+     const cakes = [
         {
             title: 'Tiramisú de Temporada',
-            desc: 'Bizcocho aterciopelado con crema de queso, un clásico que nunca falla.',
+            desc: 'Esponjoso bizcocho con notas de café y suave crema. Un clásico indispensable',
             color: '#1a8fa8'
         },
         {
             title: 'Red Velvet Clásico',
-            desc: 'Esponjoso, bañado en tres leches y coronado con un toque de canela.',
+            desc: 'Esponjoso con acentos de frutos rojos y un glaseado cremoso irresistible.',
             color: '#E271A1'
         },
         {
             title: 'Tartaleta de la Casa',
-            desc: 'Capas de chocolate belga y ganache brillante para los amantes del cacao.',
+            desc: 'Base crujiente y crema pastelera coronada con la mejor selección de fruta fresca.',
             color: '#9D3E6C'
         }
     ];
