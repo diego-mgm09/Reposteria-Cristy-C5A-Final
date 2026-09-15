@@ -118,12 +118,13 @@ $hoy = date('Y-m-d');
             ?>
         <?php endif; ?>
 
-        <section class="banner">
+        <section class="banner pt-5">
             <h1 class="titles c text-center display-4" style="padding-top: 80px;" data-reveal="fade">¡Ordena ahora!</h1>
             <div class="d-flex align-items-center justify-content-center flex-column mt-3" data-reveal="up">
                 <p class="col-10 col-md-6 text-center px-0">Ordena uno de nuestros pasteles personalizados usando el formulario y disfruta de tu postre único y con esencia.</p>
             </div>
         </section>
+
 
 
         <section>
