@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!-- LINK DE BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- LINK DE CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- LINK DE BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <script src="JavaScript/scroll-animations.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg py-2">
+            <div class="container">
+                <a class="navbar-brand me-5" href="index.html" aria-label="Ir a la página de inicio"><img
+                        src="imgs/Logu.png" alt="Pastelería Cristy" style="height: 80px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse align-items-lg-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link nav-linking-dark" aria-current="page" href="index.html">Home</a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link nav-linking-dark" href="conocenos.html">Conócenos</a>
+
+                        </li>
+
+                        <li class="nav-item active">
+
+                            <a class="nav-link active nav-linking-dark" aria-current="page"
+                                href="catalogo.html">Catálogo</a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-linking-dark" href="formulario.php">Ordena Ya</a>
+                        </li>
+
+                    </ul>
+                    <button class="cart-nav-button" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#carritoPanel" aria-controls="carritoPanel" aria-label="Abrir carrito">
+                        <i class="bi bi-bag-heart" aria-hidden="true"></i>
+                        <span class="cart-badge d-none" data-cart-count>0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="banner">
+            <h1 class="titles c text-center display-4" style="padding-top: 70px;" data-reveal="fade">Catálogo</h1>
+            <div class="d-flex align-items-center justify-content-center flex-column mt-3" data-reveal="up">
+                <p class="col-10 col-md-6 text-center px-0">El listado de productos creativos que ofrecemos en nuestra
+                    repostería con precios inigualables.</p>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container-fluid">
+                <div class="container py-5 my-3 my-lg-5">
+                    <div class="row">
+                        <div class="col-lg-3 mb-4 mb-lg-0">
+                            <div class="catalog-filter sticky-top" data-reveal="left">
+                                <h5 class="titles c6 filter-title">Categorías</h5>
+                                <div class="filter-list flex-row flex-lg-column flex-wrap">
+                                    <button type="button" class="filter-btn is-active" data-filtro="todos">
+                                        Todos
+                                    </button>
+                                    <button type="button" class="filter-btn" data-filtro="pasteles">
+                                        Pasteles
+                                    </button>
+                                    <button type="button" class="filter-btn" data-filtro="cupcakes">
+                                        Cupcakes
+                                    </button>
+                                    <button type="button" class="filter-btn" data-filtro="rollos">
+                                        Rollos y trenzas
+                                    </button>
+                                    <button type="button" class="filter-btn" data-filtro="tartaletas">
+                                        Tartaletas y milhojas
+                                    </button>
+                                    <button type="button" class="filter-btn" data-filtro="croissants">
+                                        Croissants
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="grid-productos"
+                                data-reveal-group>
+
+                                <div class="col producto" data-categoria="croissants"
+                                    data-product-id="croissant-eiffel">
+                                    <div class="card product-card h-100">
+                                        <img src="imgs/catalogo/3.webp" class="card-img-top cards-imgs"
+                                            alt="Croissant-Eiffel con pistacho y frambuesa" width="720" height="1080"
+                                            decoding="async" loading="eager" fetchpriority="high">
+                                        <button type="button" class="add-cart-button" data-add-to-cart
+                                            data-product-id="croissant-eiffel"
+                                            aria-label="Agregar Croissant-Eiffel al carrito"><i class="bi bi-plus-lg"
+                                                aria-hidden="true"></i></button>
+                                        <div class="card-body">
+                                            <h5 class="card-title titles c6">Croissant-Eiffel</h5>
+                                            <p class="card-text">Rico crossaint acompañado de una pequeña porción de
+                                                pistachoo y frambuesa.</p>
+                                            <h5 class="card-title titles c6">Q 21.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col producto" data-categoria="cupcakes"
+                                    data-product-id="strawberry-cupcakes">
+                                    <div class="card product-card h-100">
+                                        <img src="imgs/catalogo/4.webp" class="card-img-top cards-imgs"
+                                            alt="Strawberry Cupcakes" width="720" height="1080" decoding="async"
+                                            loading="eager">
+                                        <button type="button" class="add-cart-button" data-add-to-cart
+                                            data-product-id="strawberry-cupcakes"
+                                            aria-label="Agregar Strawberry Cupcakes al carrito"><i class="bi bi-plus-lg"
+                                                aria-hidden="true"></i></button>
+                                        <div class="card-body">
+                                            <h5 class="card-title titles c6">Strawberry Cupcakes</h5>
+                                            <p class="card-text">Media docena de cupcakes preparados en capas con sabor
+                                                inspirado en fresas y vainilla.</p>
+                                            <h5 class="card-title titles c6">Q 45.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col producto" data-categoria="rollos" data-product-id="imperial-roll">
+                                    <div class="card product-card h-100">
+                                        <img src="imgs/catalogo/5.webp" class="card-img-top cards-imgs"
+                                            alt="Imperial Roll de canela" width="720" height="1080" decoding="async"
+                                            loading="eager">
+                                        <button type="button" class="add-cart-button" data-add-to-cart
+                                            data-product-id="imperial-roll"
+                                            aria-label="Agregar Imperial Roll al carrito"><i class="bi bi-plus-lg"
+                                                aria-hidden="true"></i></button>
+                                        <div class="card-body">
+                                            <h5 class="card-title titles c6">Imperial Roll</h5>
+                                            <p class="card-text">Rol de canela crujiente con un extra de glaseado en la
+                                                superfice del mismo.</p>
+                                            <h5 class="card-title titles c6">Q 12.50</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col producto" data-categoria="tartaletas"
+                                    data-product-id="tartaleta-clasica">
+                                    <div class="card product-card h-100">
+                                        <img src="imgs/catalogo/6.webp" class="card-img-top cards-imgs"
+                                            alt="Tartaleta Clásica con frutas" width="720" height="1080"
+                                            decoding="async" loading="lazy">
+                                        <button type="button" class="add-cart-button" data-add-to-cart
+                                            data-product-id="tartaleta-clasica"
+                                            aria-label="Agregar Tartaleta Clásica al carrito"><i class="bi bi-plus-lg"
+                                                aria-hidden="true"></i></button>
+                                        <div class="card-body">
+                                            <h5 class="card-title titles c6">Tartaleta Clásica</h5>
+                                            <p class="card-text">Una crujiente base de masa horneada rellena de crema y
+                                                frutas frescas de temporada.</p>
+                                            <h5 class="card-title titles c6">Q 42.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col producto" data-categoria="pasteles" data-product-id="tiramisu-slice">
+                                    <div class="card product-card h-100">
+                                        <img src="imgs/catalogo/7.webp" class="card-img-top cards-imgs"
+                                            alt="Porción de Tiramisú" width="720" height="1080" decoding="async"
+                                            loading="lazy">
+                                        <button type="button" class="add-cart-button" data-add-to-cart
+                                            data-product-id="tiramisu-slice"
+                                            aria-label="Agregar Tiramisú Slice al carrito"><i class="bi bi-plus-lg"
+                                                aria-hidden="true"></i></button>
+                                        <div class="card-body">
+                                            <h5 class="card-title titles c6">Tiramisú Slice</h5>
+                                            <p class="card-text">Capas de bizcocho impregnado en café, suave crema
+                                                mascarpone y cacao en polvo.</p>
+                                            <h5 class="card-title titles c6">Q 19.50</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col producto" data-categoria="pasteles" data-product-id="red-velvet-cake">
+                                    <div class="card product-card h-100">
+                                        <img src="imgs/catalogo/10.webp" class="card-img-top cards-imgs"
+                                            alt="Pastel Red Velvet" width="720" height="1080" decoding="async"
+                                            loading="lazy">
+                                        <button type="button" class="add-cart-button" data-add-to-cart
+                                            data-product-id="red-velvet-cake"
+                                            aria-label="Agregar Red Velvet Cake al carrito"><i class="bi bi-plus-lg"
+                                                aria-hidden="true"></i></button>
+                                        <div class="card-body">
+                                            <h5 class="card-title titles c6">Red Velvet Cake</h5>
+                                            <p class="card-text">Esponjoso y elaborado con capas de suave betún de queso
+                                                crema y una textura irresistible.</p>
+                                            <h5 class="card-title titles c6">Q 55.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col producto" data-categoria="rollos" data-product-id="trenzas-rellenas">
+                                    <div class="card product-card h-100">
+                                        <img src="imgs/catalogo/11.webp" class="card-img-top cards-imgs"
+                                            alt="Trenzas Rellenas" width="720" height="1080" decoding="async"
+                                            loading="lazy">
+                                        <button type="button" class="add-cart-button" data-add-to-cart
+                                            data-product-id="trenzas-rellenas"
+                                            aria-label="Agregar Trenzas Rellenas al carrito"><i class="bi bi-plus-lg"
+                                                aria-hidden="true"></i></button>
+                                        <div class="card-body">
+                                            <h5 class="card-title titles c6">Trenzas Rellenas</h5>
+                                            <p class="card-text">Suave pan hojaldrado en forma de trenza, con un
+                                                delicioso relleno dulce.</p>
+                                            <h5 class="card-title titles c6">Q 8.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col producto" data-categoria="rollos" data-product-id="churros-glaseados">
+                                    <div class="card product-card h-100">
+                                        <img src="imgs/catalogo/12.webp" class="card-img-top cards-imgs"
+                                            alt="Churros Glaseados" width="720" height="1078" decoding="async"
+                                            loading="lazy">
+                                        <button type="button" class="add-cart-button" data-add-to-cart
+                                            data-product-id="churros-glaseados"
+                                            aria-label="Agregar Churros Glaseados al carrito"><i class="bi bi-plus-lg"
+                                                aria-hidden="true"></i></button>
+                                        <div class="card-body">
+                                            <h5 class="card-title titles c6">Churros Glaseados</h5>
+                                            <p class="card-text">Crujientes churros artesanalmente fritos y bañados con
+                                                una fina capa de glaseado dulce.</p>
+                                            <h5 class="card-title titles c6">Q 8.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col producto" data-categoria="tartaletas" data-product-id="milhojas">
+                                    <div class="card product-card h-100">
+                                        <img src="imgs/catalogo/14.webp" class="card-img-top cards-imgs"
+                                            alt="Milhojas con crema pastelera" width="720" height="1079"
+                                            decoding="async" loading="lazy">
+                                        <button type="button" class="add-cart-button" data-add-to-cart
+                                            data-product-id="milhojas" aria-label="Agregar Milhojas al carrito"><i
+                                                class="bi bi-plus-lg" aria-hidden="true"></i></button>
+                                        <div class="card-body">
+                                            <h5 class="card-title titles c6">Milhojas</h5>
+                                            <p class="card-text">Finas y crujientes capas de pasta hojaldre intercaladas
+                                                con suave crema pastelera y toque frutal.</p>
+                                            <h5 class="card-title titles c6">Q 14.60</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="filter-empty d-none text-center mt-5">No hay productos en esta categoría todavía.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <aside class="offcanvas offcanvas-end cart-panel" tabindex="-1" id="carritoPanel"
+        aria-labelledby="carritoPanelTitulo">
+        <div class="offcanvas-header">
+            <div>
+                <span class="cart-eyebrow">TU SELECCIÓN</span>
+                <h2 class="offcanvas-title titles c6" id="carritoPanelTitulo">Mi carrito</h2>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar carrito"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div class="cart-empty" data-cart-empty>
+                <i class="bi bi-bag-heart" aria-hidden="true"></i>
+                <p class="mb-1 fw-semibold">Tu carrito está vacío</p>
+                <span>Agrega tus postres favoritos con el botón +.</span>
+            </div>
+            <div class="d-none flex-grow-1" data-cart-content>
+                <div class="cart-items" data-cart-items></div>
+                <div class="cart-total-row">
+                    <span>Total</span>
+                    <strong data-cart-total>Q 0.00</strong>
+                </div>
+                <a href="formulario.php#resumen-carrito" class="btn btn-order btn-1 w-100 py-3">Continuar con mi
+                    orden</a>
+            </div>
+        </div>
+    </aside>
+
+    <div class="cart-notice" data-cart-notice role="status" aria-live="polite"></div>
+
+    <footer>
+        <div class="container-fluid bc6">
+            <div class="container pt-5 pb-4 h-100">
+                <div style="border-bottom: #fff 2px solid;" class="pb-5">
+                    <div class="row g-4" data-reveal="up">
+                        <div class="col-12 col-lg-5">
+                            <img src="imgs/Logu-obs.png" alt="" class="mb-2 mb-lg-5" style="height: 80px;">
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-2 text-white">
+                            <h5 class="fw-bold">Enlaces</h5>
+                            <p><a class="footer-link" href="index.html">Inicio</a></p>
+                            <p><a class="footer-link" href="conocenos.html">Conócenos</a></p>
+                            <p><a class="footer-link" href="catalogo.html">Productos</a></p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 text-white">
+                            <h5 class="fw-bold">Información de Contacto</h5>
+                            <p><i class="bi bi-alarm-fill"></i> Horario: 7AM-9PM</p>
+                            <p><i class="bi bi-envelope-at-fill"></i> Email: pedidos@cristy.com</p>
+                        </div>
+                        <div class="col-12 col-lg-2 text-white">
+                            <h5 class="fw-bold">Cobertura</h5>
+                            <p>Disponibles: 7AM-9PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <div class="row align-items-center g-3" data-reveal="fade">
+
+                        <div class="col-12 col-md-8">
+                            <p class="text-white mb-0 text-center text-md-start">© Copyright 2026 | Todos los derechos
+                                reservados</p>
+                        </div>
+                        <div class="col-12 col-md-4 text-white text-center text-md-end pb-3 pb-md-0">
+                            <a href="https://www.instagram.com/" target="blank" class="footer-a">
+
+                                <i class="bi bi-instagram footer-icons"></i>
+
+                            </a>
+                            <a href="https://www.facebook.com" target="blank" class="footer-a">
+
+                                <i class="bi bi-facebook footer-icons"></i>
+
+                            </a>
+                            <a href="https://www.whatsapp.com/" target="blank" class="footer-a">
+
+                                <i class="bi bi-whatsapp footer-icons"></i>
+
+                            </a>
+                            <a href="https://x.com/" target="blank" class="footer-a">
+
+                                <i class="bi bi-twitter-x footer-icons"></i>
+
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="JavaScript/carrito.js"></script>
+    <script src="JavaScript/catalogo.js"></script>
+
+
+</body>
+
+</html>
