@@ -155,7 +155,7 @@
    clamp(mínimo, valor-fluido, máximo)
    El valor fluido "5vw" crece con el ancho de pantalla, los extremos lo limitan. */
 .hero-title {
-    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.;
 }
 
@@ -744,39 +744,55 @@ nav,
 @media (max-width: 575.98px) {
     .history-gallery {
         overflow: hidden;
-        padding-top: .75rem !important;
-        padding-bottom: .75rem !important;
+        padding-top: .5rem !important;
+        padding-bottom: 1rem !important;
     }
 
     .box {
-        /* La composición conserva el efecto 3D, pero evita el vacío excesivo
-           antes de las imágenes en pantallas estrechas. */
-        min-height: 285px;
+        /* En móvil el volumen se logra por capas, no por ángulos: así las
+           fotos se leen completas y el carrusel no ocupa espacio de más. */
+        min-height: 250px;
+        perspective: none;
+        transform-style: flat;
     }
 
     .box .item {
-        bottom: 50px;
+        bottom: 20px;
         left: calc(50% - 75px);
         width: 150px;
         height: 225px;
+        -webkit-box-reflect: none !important;
+        box-shadow: 0 12px 24px rgba(64, 42, 54, .24);
+    }
+
+    .buttons {
+        margin-top: .75rem;
     }
 
     .box .item:nth-child(1),
-    .box .item:nth-child(2) {
-        transform: translate3d(-70px, 0, 0) scale(.82) rotateY(20deg);
+    .box .item:nth-child(2),
+    .box .item:nth-child(6),
+    .box .item:nth-child(7) {
+        transform: translate3d(0, 0, 0) scale(.78);
+        opacity: 0;
+        pointer-events: none;
     }
 
     .box .item:nth-child(3) {
-        transform: translate3d(-45px, 0, 0) scale(.9) rotateY(12deg);
+        transform: translate3d(-52px, 0, 0) scale(.84);
+        z-index: 2;
+        opacity: .82;
+    }
+
+    .box .item:nth-child(4) {
+        transform: translate3d(0, 0, 0) scale(1);
+        z-index: 3;
     }
 
     .box .item:nth-child(5) {
-        transform: translate3d(45px, 0, 0) scale(.9) rotateY(-12deg);
-    }
-
-    .box .item:nth-child(6),
-    .box .item:nth-child(7) {
-        transform: translate3d(70px, 0, 0) scale(.82) rotateY(-20deg);
+        transform: translate3d(52px, 0, 0) scale(.84);
+        z-index: 2;
+        opacity: .82;
     }
 
 }
